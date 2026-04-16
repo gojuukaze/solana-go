@@ -134,6 +134,69 @@ const (
 
 	// Initialize the close account authority on a new mint.
 	Instruction_InitializeMintCloseAuthority
+
+	// Transfer fee extension instructions.
+	Instruction_TransferFeeExtension
+
+	// Confidential transfer extension instructions.
+	Instruction_ConfidentialTransferExtension
+
+	// Default account state extension instructions.
+	Instruction_DefaultAccountStateExtension
+
+	// Reallocate an account to hold additional extensions.
+	Instruction_Reallocate
+
+	// Memo transfer extension instructions.
+	Instruction_MemoTransferExtension
+
+	// Create the native mint for Token-2022.
+	Instruction_CreateNativeMint
+
+	// Initialize the non-transferable extension for a mint.
+	Instruction_InitializeNonTransferableMint
+
+	// Interest-bearing mint extension instructions.
+	Instruction_InterestBearingMintExtension
+
+	// CPI guard extension instructions.
+	Instruction_CpiGuardExtension
+
+	// Initialize a permanent delegate for a mint.
+	Instruction_InitializePermanentDelegate
+
+	// Transfer hook extension instructions.
+	Instruction_TransferHookExtension
+
+	// Confidential transfer fee extension instructions.
+	Instruction_ConfidentialTransferFeeExtension
+
+	// Withdraw excess lamports from an account.
+	Instruction_WithdrawExcessLamports
+
+	// Metadata pointer extension instructions.
+	Instruction_MetadataPointerExtension
+
+	// Group pointer extension instructions.
+	Instruction_GroupPointerExtension
+
+	// Group member pointer extension instructions.
+	Instruction_GroupMemberPointerExtension
+
+	// Confidential mint/burn extension instructions.
+	Instruction_ConfidentialMintBurnExtension
+
+	// Scaled UI amount extension instructions.
+	Instruction_ScaledUiAmountExtension
+
+	// Pausable extension instructions.
+	Instruction_PausableExtension
+
+	// Unwrap native SOL lamports.
+	Instruction_UnwrapLamports
+
+	// Permissioned burn extension instructions.
+	Instruction_PermissionedBurnExtension
 )
 
 // InstructionIDToName returns the name of the instruction given its ID.
@@ -191,6 +254,48 @@ func InstructionIDToName(id uint8) string {
 		return "UiAmountToAmount"
 	case Instruction_InitializeMintCloseAuthority:
 		return "InitializeMintCloseAuthority"
+	case Instruction_TransferFeeExtension:
+		return "TransferFeeExtension"
+	case Instruction_ConfidentialTransferExtension:
+		return "ConfidentialTransferExtension"
+	case Instruction_DefaultAccountStateExtension:
+		return "DefaultAccountStateExtension"
+	case Instruction_Reallocate:
+		return "Reallocate"
+	case Instruction_MemoTransferExtension:
+		return "MemoTransferExtension"
+	case Instruction_CreateNativeMint:
+		return "CreateNativeMint"
+	case Instruction_InitializeNonTransferableMint:
+		return "InitializeNonTransferableMint"
+	case Instruction_InterestBearingMintExtension:
+		return "InterestBearingMintExtension"
+	case Instruction_CpiGuardExtension:
+		return "CpiGuardExtension"
+	case Instruction_InitializePermanentDelegate:
+		return "InitializePermanentDelegate"
+	case Instruction_TransferHookExtension:
+		return "TransferHookExtension"
+	case Instruction_ConfidentialTransferFeeExtension:
+		return "ConfidentialTransferFeeExtension"
+	case Instruction_WithdrawExcessLamports:
+		return "WithdrawExcessLamports"
+	case Instruction_MetadataPointerExtension:
+		return "MetadataPointerExtension"
+	case Instruction_GroupPointerExtension:
+		return "GroupPointerExtension"
+	case Instruction_GroupMemberPointerExtension:
+		return "GroupMemberPointerExtension"
+	case Instruction_ConfidentialMintBurnExtension:
+		return "ConfidentialMintBurnExtension"
+	case Instruction_ScaledUiAmountExtension:
+		return "ScaledUiAmountExtension"
+	case Instruction_PausableExtension:
+		return "PausableExtension"
+	case Instruction_UnwrapLamports:
+		return "UnwrapLamports"
+	case Instruction_PermissionedBurnExtension:
+		return "PermissionedBurnExtension"
 	default:
 		return ""
 	}
@@ -288,6 +393,69 @@ var InstructionImplDef = ag_binary.NewVariantDefinition(
 		},
 		{
 			"InitializeMintCloseAuthority", (*InitializeMintCloseAuthority)(nil),
+		},
+		{
+			"TransferFeeExtension", (*TransferFeeExtension)(nil),
+		},
+		{
+			"ConfidentialTransferExtension", (*ConfidentialTransferExtension)(nil),
+		},
+		{
+			"DefaultAccountStateExtension", (*DefaultAccountStateExtension)(nil),
+		},
+		{
+			"Reallocate", (*Reallocate)(nil),
+		},
+		{
+			"MemoTransferExtension", (*MemoTransferExtension)(nil),
+		},
+		{
+			"CreateNativeMint", (*CreateNativeMint)(nil),
+		},
+		{
+			"InitializeNonTransferableMint", (*InitializeNonTransferableMint)(nil),
+		},
+		{
+			"InterestBearingMintExtension", (*InterestBearingMintExtension)(nil),
+		},
+		{
+			"CpiGuardExtension", (*CpiGuardExtension)(nil),
+		},
+		{
+			"InitializePermanentDelegate", (*InitializePermanentDelegate)(nil),
+		},
+		{
+			"TransferHookExtension", (*TransferHookExtension)(nil),
+		},
+		{
+			"ConfidentialTransferFeeExtension", (*ConfidentialTransferFeeExtension)(nil),
+		},
+		{
+			"WithdrawExcessLamports", (*WithdrawExcessLamports)(nil),
+		},
+		{
+			"MetadataPointerExtension", (*MetadataPointerExtension)(nil),
+		},
+		{
+			"GroupPointerExtension", (*GroupPointerExtension)(nil),
+		},
+		{
+			"GroupMemberPointerExtension", (*GroupMemberPointerExtension)(nil),
+		},
+		{
+			"ConfidentialMintBurnExtension", (*ConfidentialMintBurnExtension)(nil),
+		},
+		{
+			"ScaledUiAmountExtension", (*ScaledUiAmountExtension)(nil),
+		},
+		{
+			"PausableExtension", (*PausableExtension)(nil),
+		},
+		{
+			"UnwrapLamports", (*UnwrapLamports)(nil),
+		},
+		{
+			"PermissionedBurnExtension", (*PermissionedBurnExtension)(nil),
 		},
 	},
 )
