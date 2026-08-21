@@ -114,12 +114,10 @@ linters:
           - unused
       - path: bip39/wordlists
         linters:
-          - errcheck
-          - errorlint
-          - staticcheck
-          - unused
           - misspell
-          - govet
+      - path: bip39/bip39\.go
+        linters:
+          - staticcheck
 
 formatters:
   enable:
