@@ -118,6 +118,8 @@ linters:
           - errorlint
           - staticcheck
           - unused
+          - misspell
+          - govet
 
 formatters:
   enable:
